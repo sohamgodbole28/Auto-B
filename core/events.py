@@ -24,6 +24,7 @@ class StageFinished(Event):
     stage_name: str
     duration: float
     success: bool
+    timed_out: bool
     stdout: str
     stderr: str
     empty_output: bool = False

@@ -13,9 +13,7 @@ from core import version
 from engine.engine import Engine
 from menu.progress import UIProgressTracker
 from pipelines.recon import ReconPipeline
-from pipelines.javascript import JavaScriptPipeline
-from pipelines.api import ApiPipeline
-from pipelines.vulnerability import VulnerabilityPipeline
+
 
 class CLI:
     """Handles displaying the interactive command-line interface."""
@@ -83,12 +81,8 @@ class CLI:
 
         choices = [
             "[1] Recon Workflow",
-            "[2] JavaScript Workflow",
-            "[3] API Workflow",
-            "[4] Vulnerability Workflow",
-            "[D] Dummy Workflow (Test Engine)",
-            "[5] Environment Check",
-            "[6] Settings",
+            "[2] Environment Check",
+            "[3] Settings",
             "[0] Exit"
         ]
 
@@ -112,26 +106,8 @@ class CLI:
                         pipeline = ReconPipeline(self.engine)
                         pipeline.execute()
                 elif choice.startswith("[2]"):
-                    if self.show_workflow_info("javascript"):
-                        pipeline = JavaScriptPipeline(self.engine)
-                        pipeline.execute()
-                elif choice.startswith("[3]"):
-                    if self.show_workflow_info("api"):
-                        pipeline = ApiPipeline(self.engine)
-                        pipeline.execute()
-                elif choice.startswith("[4]"):
-                    if self.show_workflow_info("vulnerability"):
-                        pipeline = VulnerabilityPipeline(self.engine)
-                        pipeline.execute()
-                elif choice.startswith("[D]"):
-                    if self.show_workflow_info("dummy"):
-                        pipeline = ReconPipeline(self.engine) # Just to test passing it
-                        # wait, dummy is loaded but engine.execute_workflow_by_name doesn't exist anymore!
-                        # Oh, I removed it from engine.py! I should add it back or just ignore dummy.
-                        self.console.print("[yellow]Dummy direct execution removed in favor of Pipeline orchestration.[/yellow]")
-                elif choice.startswith("[5]"):
                     self.run_env_check()
-                elif choice.startswith("[6]"):
+                elif choice.startswith("[3]"):
                     self.console.print("[cyan]Settings coming soon![/cyan]")
 
             except KeyboardInterrupt:

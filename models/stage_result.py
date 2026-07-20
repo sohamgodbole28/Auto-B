@@ -10,6 +10,7 @@ class StageResult:
     command: str
     exit_code: int
     success: bool
+    timed_out: bool
     stdout: str
     stderr: str
     duration: float

@@ -63,7 +63,8 @@ class Loader:
                     # Step can be a dict with name and tool
                     stages.append(Stage(
                         name=step_data.get("name", ""),
-                        tool_name=step_data.get("tool", "")
+                        tool_name=step_data.get("tool", ""),
+                        timeout=step_data.get("timeout")
                     ))
                     
                 workflow = Workflow(

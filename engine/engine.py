@@ -78,7 +78,8 @@ class Engine:
         # Execute command using the Executor
         result = self.context.executor.execute_command(
             stage_name=stage.name,
-            command=command
+            command=command,
+            timeout=stage.timeout
         )
         
         import os
@@ -94,6 +95,7 @@ class Engine:
             stage_name=stage.name,
             duration=result.duration,
             success=result.success,
+            timed_out=result.timed_out,
             stdout=result.stdout,
             stderr=result.stderr,
             empty_output=empty_output

@@ -20,29 +20,43 @@ required_tools:
 steps:
   - name: subfinder
     tool: subfinder
+    timeout: 300
   - name: assetfinder
     tool: assetfinder
+    timeout: 180
   - name: amass
     tool: amass
+    timeout: 900
   - name: github-subdomains
     tool: github-subdomains
+    timeout: 120
   - name: dnsx
     tool: dnsx
+    timeout: 300
   - name: shuffledns
     tool: shuffledns
+    timeout: 600
   - name: httpx
     tool: httpx
+    timeout: 600
   - name: katana
     tool: katana
+    timeout: 900
   - name: gau
     tool: gau
+    timeout: 300
   - name: waybackurls
     tool: waybackurls
+    timeout: 300
   - name: uro
     tool: uro
+    timeout: 120
   - name: unfurl_domains
     tool: unfurl
+    timeout: 120
   - name: unfurl_paths
     tool: unfurl
+    timeout: 120
   - name: unfurl_parameters
     tool: unfurl
+    timeout: 120

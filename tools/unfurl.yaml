@@ -1,6 +1,6 @@
 name: unfurl
 description: URL parsing
 executable: unfurl
-command_template: cat {INPUT} | unfurl {MODE} > {OUTPUT}
+command_template: "{CAT} {INPUT} | unfurl {MODE} > {OUTPUT}"
 output: file
 required: []
