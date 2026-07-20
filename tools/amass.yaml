@@ -1,0 +1,6 @@
+name: amass
+description: Amass passive mode
+executable: amass
+command_template: amass enum -passive -d {TARGET} -o {OUTPUT}
+output: file
+required: []

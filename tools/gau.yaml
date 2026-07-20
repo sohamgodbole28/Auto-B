@@ -1,0 +1,6 @@
+name: gau
+description: GetAllUrls
+executable: gau
+command_template: gau {TARGET} > {OUTPUT}
+output: file
+required: []

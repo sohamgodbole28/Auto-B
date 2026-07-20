@@ -1,0 +1,6 @@
+name: waybackurls
+description: WaybackUrls
+executable: waybackurls
+command_template: waybackurls {TARGET} > {OUTPUT}
+output: file
+required: []

@@ -1,0 +1,48 @@
+name: Recon Workflow
+description: Full reconnaissance orchestration workflow
+author: Auto-B
+version: 1.0
+estimated_runtime: 5-15 minutes
+output_directory: recon
+required_tools:
+  - subfinder
+  - assetfinder
+  - amass
+  - github-subdomains
+  - dnsx
+  - shuffledns
+  - httpx
+  - katana
+  - gau
+  - waybackurls
+  - uro
+  - unfurl
+steps:
+  - name: subfinder
+    tool: subfinder
+  - name: assetfinder
+    tool: assetfinder
+  - name: amass
+    tool: amass
+  - name: github-subdomains
+    tool: github-subdomains
+  - name: dnsx
+    tool: dnsx
+  - name: shuffledns
+    tool: shuffledns
+  - name: httpx
+    tool: httpx
+  - name: katana
+    tool: katana
+  - name: gau
+    tool: gau
+  - name: waybackurls
+    tool: waybackurls
+  - name: uro
+    tool: uro
+  - name: unfurl_domains
+    tool: unfurl
+  - name: unfurl_paths
+    tool: unfurl
+  - name: unfurl_parameters
+    tool: unfurl

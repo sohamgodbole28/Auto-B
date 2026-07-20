@@ -1,0 +1,6 @@
+name: shuffledns
+description: Shuffledns resolution
+executable: shuffledns
+command_template: shuffledns -d {TARGET} -list {INPUT} -r {RESOLVERS} -o {OUTPUT}
+output: file
+required: []

@@ -1,0 +1,6 @@
+name: katana
+description: Web crawling
+executable: katana
+command_template: katana -silent -list {INPUT} -o {OUTPUT}
+output: file
+required: []

@@ -1,0 +1,6 @@
+name: dnsx
+description: DNS resolution
+executable: dnsx
+command_template: dnsx -l {INPUT} -silent -o {OUTPUT}
+output: file
+required: []

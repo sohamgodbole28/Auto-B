@@ -1,0 +1,6 @@
+name: assetfinder
+description: Asset enumeration
+executable: assetfinder
+command_template: assetfinder --subs-only {TARGET} > {OUTPUT}
+output: file
+required: []

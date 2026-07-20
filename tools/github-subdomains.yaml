@@ -1,0 +1,6 @@
+name: github-subdomains
+description: GitHub subdomain enumeration
+executable: github-subdomains
+command_template: github-subdomains -d {TARGET} -o {OUTPUT}
+output: file
+required: []

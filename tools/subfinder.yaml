@@ -1,0 +1,6 @@
+name: subfinder
+description: Passive subdomain enumeration
+executable: subfinder
+command_template: subfinder -silent -d {TARGET} -o {OUTPUT}
+output: file
+required: []

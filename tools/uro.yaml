@@ -1,0 +1,6 @@
+name: uro
+description: URL cleaning
+executable: uro
+command_template: uro < {INPUT} > {OUTPUT}
+output: file
+required: []

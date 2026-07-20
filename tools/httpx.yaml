@@ -1,0 +1,6 @@
+name: httpx
+description: HTTP Probing
+executable: httpx
+command_template: httpx -l {INPUT} -silent -sc -title -ip -tech-detect -server -location -favicon -json -o {OUTPUT}
+output: file
+required: []

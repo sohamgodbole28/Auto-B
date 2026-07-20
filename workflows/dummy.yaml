@@ -1,0 +1,10 @@
+name: Dummy Workflow
+description: A safe workflow to verify the engine architecture
+author: Auto-B
+version: 1.0
+estimated_runtime: < 1 minute
+required_tools:
+  - dummy_tool
+steps:
+  - name: Dummy Stage 1
+    tool: dummy_tool

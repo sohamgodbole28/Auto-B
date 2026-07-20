@@ -1,0 +1,6 @@
+name: dummy_tool
+description: A dummy tool for testing
+executable: python
+command_template: python -c "print('Dummy Tool Executed successfully!')"
+output: stdout
+required: []
